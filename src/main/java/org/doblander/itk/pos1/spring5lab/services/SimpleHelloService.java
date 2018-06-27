@@ -24,7 +24,7 @@ public class SimpleHelloService implements HelloService {
         //persons.iterator().hasNext();
         greetings.add("Hallo, "
                     + persons.iterator().next().getFirstName());
-    }
+
         return greetings;
     }
 }
