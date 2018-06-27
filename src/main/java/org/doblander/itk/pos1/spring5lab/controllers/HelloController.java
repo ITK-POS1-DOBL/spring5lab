@@ -17,9 +17,7 @@ public class HelloController {
     @RequestMapping("/person")
     public String sayHello(Model model) {
 
-        System.out.println("Hello - from controller!");
-
-        model.addAttribute("greeting", simpleHelloService.sayGreeting());
+        model.addAttribute("greetings", simpleHelloService.getGreetings());
 
         return "hello";
     }
