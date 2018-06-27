@@ -21,9 +21,11 @@ public class SimpleHelloService implements HelloService {
 
         List<String> greetings = new ArrayList<>();
         Iterable<Person> persons = personRepository.findAll();
-        //persons.iterator().hasNext();
-        greetings.add("Hallo, "
-                    + persons.iterator().next().getFirstName());
+        persons.forEach(person -> greetings.add("Hallo, "
+                + person.getFirstName()
+                + " "
+                + person.getLastName()
+                + "!"));
 
         return greetings;
     }
